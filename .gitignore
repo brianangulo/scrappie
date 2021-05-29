@@ -57,3 +57,6 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+src/assets/shared/arr.js
+
+/src/assets/shared
