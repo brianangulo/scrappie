@@ -2,9 +2,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 //Dependencies imports
-import LottieView from "lottie-react-native";
+
 //Assets imports
-import newspaperAnim from "../assets/animations/newspaper.json";
+
 
 //Main component being exported is WelcomeView
 function WelcomeView() {

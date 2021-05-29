@@ -5,7 +5,11 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "macos": "react-native run-macos",
     "start": "react-native start",
+    "reset": "yarn start --reset-cache",
+    "clearwatch": "watchman watch-del-all",
+    "git": "git add . && git commit . -m",
     "test": "jest",
     "lint": "eslint ."
   },
