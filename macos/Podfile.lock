@@ -59,6 +59,10 @@ PODS:
   - FlipperKit/SKIOSNetworkPlugin (0.54.0):
     - FlipperKit/Core
     - FlipperKit/FlipperKitNetworkPlugin
+  - Folly (2016.09.26.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
   - glog (0.3.5)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.180)
@@ -237,6 +241,8 @@ PODS:
     - React-cxxreact (= 0.63.30)
     - React-jsi (= 0.63.30)
   - React-jsinspector (0.63.30)
+  - react-native-safe-area-context (3.2.0):
+    - React-Core
   - React-RCTActionSheet (0.63.30):
     - React-Core/RCTActionSheetHeaders (= 0.63.30)
   - React-RCTAnimation (0.63.30):
@@ -297,6 +303,44 @@ PODS:
     - React-Core (= 0.63.30)
     - React-cxxreact (= 0.63.30)
     - React-jsi (= 0.63.30)
+  - RNCMaskedView (0.1.11):
+    - React
+  - RNGestureHandler (1.10.3):
+    - React-Core
+  - RNReanimated (2.2.0):
+    - DoubleConversion
+    - FBLazyVector
+    - FBReactNativeSpec
+    - Folly
+    - glog
+    - RCTRequired
+    - RCTTypeSafety
+    - React
+    - React-callinvoker
+    - React-Core
+    - React-Core/DevSupport
+    - React-Core/RCTWebSocket
+    - React-CoreModules
+    - React-cxxreact
+    - React-jsi
+    - React-jsiexecutor
+    - React-jsinspector
+    - React-RCTActionSheet
+    - React-RCTAnimation
+    - React-RCTBlob
+    - React-RCTImage
+    - React-RCTLinking
+    - React-RCTNetwork
+    - React-RCTSettings
+    - React-RCTText
+    - React-RCTVibration
+    - ReactCommon/turbomodule/core
+    - Yoga
+  - RNScreens (3.3.0):
+    - React-Core
+    - React-RCTImage
+  - RNVectorIcons (8.1.0):
+    - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -339,6 +383,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native-macos/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native-macos/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native-macos/ReactCommon/jsinspector`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native-macos/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native-macos/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native-macos/Libraries/Blob`)
@@ -349,6 +394,11 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native-macos/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native-macos/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native-macos/ReactCommon`)
+  - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - RNScreens (from `../node_modules/react-native-screens`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native-macos/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -363,6 +413,7 @@ SPEC REPOS:
     - Flipper-PeerTalk
     - Flipper-RSocket
     - FlipperKit
+    - Folly
     - libevent
     - OpenSSL-Universal
     - YogaKit
@@ -400,6 +451,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-macos/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native-macos/ReactCommon/jsinspector"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   React-RCTActionSheet:
     :path: "../node_modules/react-native-macos/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -420,6 +473,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-macos/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native-macos/ReactCommon"
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-community/masked-view"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   Yoga:
     :path: "../node_modules/react-native-macos/ReactCommon/yoga"
 
@@ -438,6 +501,7 @@ SPEC CHECKSUMS:
   Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
   Flipper-RSocket: d9d9ade67cbecf6ac10730304bf5607266dd2541
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
+  Folly: 211775e49d8da0ca658aebc8eab89d642935755c
   glog: 1cb7c408c781ae8f35bbababe459b45e3dee4ec1
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
@@ -452,6 +516,7 @@ SPEC CHECKSUMS:
   React-jsi: 27b0b2adaea24e3c7d6db632df301eb95e7f9e4a
   React-jsiexecutor: 2711591a0de006d42afa71a6b43d112465a89498
   React-jsinspector: f6e4de1986f5defba72a5b57e80eb0e35c0f2c5d
+  react-native-safe-area-context: f0906bf8bc9835ac9a9d3f97e8bde2a997d8da79
   React-RCTActionSheet: 36a0f97b5b3b9ecbb743e973665e058682d6a24a
   React-RCTAnimation: 972591be7dfc305a8a21134f0ae8ce7d7a49a47d
   React-RCTBlob: 8895aebee0535301677c370a66579d64b292622a
@@ -462,6 +527,11 @@ SPEC CHECKSUMS:
   React-RCTText: 7b523367d14ccc2ca403d9b29a529fa364d6fe20
   React-RCTVibration: 8423f53b3969c9e80afdd46d3379a9013f4659da
   ReactCommon: 517525907146ef19a42ee94aef4aa629f949ce63
+  RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
+  RNReanimated: d9da990fc90123f4ffbfdda93d00fc15174863a8
+  RNScreens: bf59f17fbf001f1025243eeed5f19419d3c11ef2
+  RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
   Yoga: 781b517dcccc371b8a7397f85486919a35009985
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
