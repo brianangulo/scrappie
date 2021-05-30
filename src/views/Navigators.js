@@ -25,7 +25,7 @@ const WelcomeViewStack = () => {
 const FeedStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Yo!" component={Feed} />
+      <Stack.Screen name="NewsFeed" component={Feed} />
     </Stack.Navigator>
   );
 };

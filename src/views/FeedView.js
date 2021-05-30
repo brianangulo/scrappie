@@ -1,24 +1,53 @@
 //Core imports
-import React from 'react';
-import {StyleSheet, ScrollView, SafeAreaView} from 'react-native';
-//Dependencies imports
-//Assets imports
+import React, { useEffect } from 'react';
+import {SafeAreaView} from 'react-native';
+//Redux
+import {useSelector, useDispatch} from 'react-redux';
+import { setUrl } from "../redux/rootSlice";
 //Components imports
 import FeedList from '../components/FeedComponent';
+//Api key
+import {API_KEY} from '../../keys';
+//Axios
+import axios from 'axios';
 
 function Feed() {
+  //state + redux hooks
+  const url = useSelector((state) => state.root.url)
+  const dispatch = useDispatch();
+
+  //Fetching info
+  const fetchLinks = () => {
+    const options = {
+      method: 'GET',
+      url: 'https://yahoo-finance15.p.rapidapi.com/api/yahoo/ne/news',
+      headers: {
+        'x-rapidapi-key': API_KEY,
+        'x-rapidapi-host': 'yahoo-finance15.p.rapidapi.com',
+      },
+    };
+
+    axios
+      .request(options)
+      .then(function (response) {
+       dispatch(setUrl(response.data)); 
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  };
+  //Fetching the information on mount with useeffect hook
+  useEffect(() => {
+    fetchLinks();
+  }, []);
 
   return (
     <SafeAreaView>
-      <FeedList />
+      <FeedList
+        url={url}
+      />
     </SafeAreaView>
   );
 }
-
-// const styles = StyleSheet.create({
-//     text: {
-//         fontFamily: "sanz",
-//     }
-// })
 
 export default Feed;
