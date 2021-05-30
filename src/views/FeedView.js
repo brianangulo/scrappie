@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import {SafeAreaView} from 'react-native';
 //Redux
 import {useSelector, useDispatch} from 'react-redux';
-import { setUrl } from "../redux/rootSlice";
+import { setUrl, setSavedUrls } from "../redux/rootSlice";
 //Components imports
 import FeedList from '../components/FeedComponent';
 //Api key
@@ -14,7 +14,13 @@ import axios from 'axios';
 function Feed() {
   //state + redux hooks
   const url = useSelector((state) => state.root.url)
+  const savedUrls = useSelector((state) => state.root.savedUrls);
   const dispatch = useDispatch();
+
+  //handlers
+  const handleSaveUrl = (url) => {
+    dispatch(setSavedUrls(url));
+  };
 
   //Fetching info
   const fetchLinks = () => {
@@ -43,9 +49,7 @@ function Feed() {
 
   return (
     <SafeAreaView>
-      <FeedList
-        url={url}
-      />
+      <FeedList url={url} handleSaveUrl={handleSaveUrl} />
     </SafeAreaView>
   );
 }

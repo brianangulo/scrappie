@@ -19,7 +19,7 @@ function FeedList(props) {
         <ListItem.Content>
           <RNUrlPreview text={item.link} />
         </ListItem.Content>
-        <Button title="Save" />
+        <Button title="Save" onPress={() => props.handleSaveUrl(item.link)} />
       </ListItem>
     );
   };
