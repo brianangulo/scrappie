@@ -7,6 +7,8 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 //Views Imports
 import WelcomeView from './WelcomeView';
 import Feed from './FeedView';
+import Bookmarks from './BookmarksView';
+import Login from './LoginView';
 
 //Caching navigators + any hooks + extras
 const Stack = createStackNavigator();
@@ -27,6 +29,23 @@ const FeedStack = () => {
     </Stack.Navigator>
   );
 };
+
+const BookmarksStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Saved Bookmarks" component={Bookmarks} />
+    </Stack.Navigator>
+  );
+};
+
+const LoginStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Login" component={Login} />
+    </Stack.Navigator>
+  );
+};
+
 //Main drawer navigator
 const MainDrawerNav = () => {
   const dimensions = useWindowDimensions();
@@ -39,6 +58,8 @@ const MainDrawerNav = () => {
       }}>
       <Drawer.Screen name="Welcome" component={WelcomeViewStack} />
       <Drawer.Screen name="Feed" component={FeedStack} />
+      <Drawer.Screen name="Bookmarks" component={BookmarksStack} />
+      <Drawer.Screen name="Login" component={LoginStack} />
     </Drawer.Navigator>
   );
 };
