@@ -1,8 +1,8 @@
 //Core
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, ScrollView, SafeAreaView, FlatList} from 'react-native';
+import {StyleSheet, FlatList} from 'react-native';
 //importing some dependencies
-import { ListItem } from "react-native-elements";
+import { ListItem, Button } from "react-native-elements";
 //Url previewer
 import RNUrlPreview from 'react-native-url-preview';
 //Axios for https
@@ -46,11 +46,11 @@ function FeedList() {
   //A render item function that will be provided to FLatList comp. it uses listitem from RNE
   const renderItem = ({item}) => {
     return (
-      <ListItem bottomDivider>
+      <ListItem bottomDivider disabled>
         <ListItem.Content>
           <RNUrlPreview text={item.link} />
         </ListItem.Content>
-        <ListItem.Chevron />
+        <Button title="Save" />
       </ListItem>
     );
   };
