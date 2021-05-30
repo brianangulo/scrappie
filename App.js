@@ -4,13 +4,18 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 //Views Imports or navigators
 import MainDrawerNav from "./src/views/Navigators";
+//redux related imports
+import store from './app/store';
+import {Provider} from 'react-redux';
 
-//root component
+//root component wrapped in redux provider and rn nav
 const App = () => {
   return (
-    <NavigationContainer>
-      <MainDrawerNav />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <MainDrawerNav />
+      </NavigationContainer>
+    </Provider>
   );
 };
 
