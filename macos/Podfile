@@ -17,6 +17,9 @@ target 'scrappie-macOS' do
   # Pods specifically for macOS target
 end
 
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+
 target 'scrappie-iOS' do
   platform :ios, '10'
   use_native_modules!

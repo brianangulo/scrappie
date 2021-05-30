@@ -25,6 +25,8 @@ target 'scrappie' do
   end
 end
 
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 target 'scrappie-tvOS' do
   # Pods for scrappie-tvOS
 

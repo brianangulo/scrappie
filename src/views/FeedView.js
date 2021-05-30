@@ -1,6 +1,6 @@
 //Core imports
 import React from 'react';
-import {StyleSheet, ScrollView} from 'react-native';
+import {StyleSheet, ScrollView, SafeAreaView} from 'react-native';
 //Dependencies imports
 //Assets imports
 //Components imports
@@ -9,9 +9,9 @@ import FeedList from '../components/FeedComponent';
 function Feed() {
 
   return (
-    <ScrollView>
+    <SafeAreaView>
       <FeedList />
-    </ScrollView>
+    </SafeAreaView>
   );
 }
 
