@@ -10,10 +10,10 @@ export const rootSlice = createSlice({
             state.url = action.payload
         }
     }
-})
+});
 
 //exporting out the action creators
-export const { setUrl } = rootSlice.actions
+export const { setUrl } = rootSlice.actions;
 
 //exporting out the reducer
-export default rootSlice.reducer
+export default rootSlice.reducer;
