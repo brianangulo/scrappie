@@ -60,3 +60,4 @@ buck-out/
 src/assets/shared/arr.js
 
 /src/assets/shared
+keys.js

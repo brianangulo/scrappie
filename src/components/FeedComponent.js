@@ -1,7 +1,12 @@
+//Core
 import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
+//Url previewer
 import RNUrlPreview from 'react-native-url-preview';
+//Axios for https
 import axios from 'axios';
+//Importing apikey
+import { API_KEY } from '../../keys';
 
 function FeedList() {
   //state
@@ -13,7 +18,7 @@ function FeedList() {
       method: 'GET',
       url: 'https://yahoo-finance15.p.rapidapi.com/api/yahoo/ne/news',
       headers: {
-        'x-rapidapi-key': '3e6a3760ffmshbed4443fa9471ddp1f2d63jsnebf729650a08',
+        'x-rapidapi-key': API_KEY,
         'x-rapidapi-host': 'yahoo-finance15.p.rapidapi.com',
       },
     };
